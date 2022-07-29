@@ -1,0 +1,43 @@
+.container{
+    max-width: 1320px;  //full↓
+    margin: 0 auto;
+    padding: $spacing-base*20 ($grid-gutter-width / 2);
+
+    @include desktop(){ max-width: 1140px;} //1200↓
+    @include pad(){ max-width: 720px;}      //992↓
+    //768↓
+    @include mobile(){ 
+      max-width: 540px;
+      padding-top: $spacing-base*10;
+      padding-bottom: $spacing-base*10;
+    }   
+}
+
+
+//col
+@each $name, $color in $cols {
+  .col-#{$name} { 
+    width:$color;
+    padding-left: $grid-gutter-width / 2;
+    padding-right:  $grid-gutter-width / 2;
+  }
+}
+@include pad(){
+  @each $name, $color in $cols {
+    .col-md-#{$name} { 
+      width:$color;
+      padding-left: $grid-gutter-width / 2;
+      padding-right:  $grid-gutter-width / 2;
+    }
+  }
+}
+
+@include mobile(){
+  @each $name, $color in $cols {
+    .col-sm-#{$name} { 
+      width:$color;
+      padding-left: $grid-gutter-width / 2;
+      padding-right:  $grid-gutter-width / 2;
+    }
+  }
+}

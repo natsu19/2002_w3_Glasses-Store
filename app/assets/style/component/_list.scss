@@ -1,0 +1,67 @@
+//列表排序方式 m=md s=sm
+
+//4欄md時改為兩欄 s時改為單欄
+.list4m2s1{
+    @include list4m2s1;
+}
+
+//mt48 sm改24
+.list4m2s1-mt48s24{
+    @include list4m2s1(){   
+        li{
+            @include pad(){
+                &:nth-child(3),&:nth-child(4){margin-top: $spacing-base * 12;}
+            }
+            @include mobile(){
+                margin-top: $spacing-base * 6;
+            }
+        }
+    }
+}
+
+
+//mt48 sm改24
+.list3ms1{
+    @include list4m2s1(){   
+        @include pad(){
+            flex-direction: column;
+            align-items: center;
+        }
+        li{
+            width: map-get($cols , 4 );
+            @include pad(){
+                width: map-get($cols , 6 );
+                &:nth-child(3),&:nth-child(4){margin-top: $spacing-base*12;}
+            }
+            @include mobile(){
+                width: map-get($cols , 12 );
+                margin-top: $spacing-base * 6;
+            }
+        }
+    }
+}
+
+.card-shadow{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 6px rgba($color-black , 0.16);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 100%;
+    .body{
+        padding: $spacing-base * 4;
+        flex-grow:1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+    }
+    .content h3{ 
+        font-weight: map-get($font-weights , medium);
+    }
+
+    .date{
+        color: rgba( $color-black , 0.44);
+        font-size: map-get($font-sizes, 9);
+    }
+}

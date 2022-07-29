@@ -1,0 +1,79 @@
+.d-flex{ display: flex;}
+// .flex-row{ 
+//     display: flex;
+//     flex-direction: row;
+// }
+// .flex-column{
+//     display: flex;
+//     flex-direction: column;    
+// }
+// .flex-row-reverse{
+//     display: flex;
+//     flex-direction: row-reverse;
+// }
+
+
+@each $name, $color in $flex-direction {
+    .flex-#{$name} { 
+        display: flex;
+        flex-direction:$color;
+    }
+}
+@each $name, $color in $justify-content {
+    .jc-#{$name} { justify-content:$color;}
+}
+@each $name, $color in $align-items {
+    .ai-#{$name} { align-items:$color;}
+}
+@each $name, $color in $flex-wrap {
+    .flex-#{$name} { flex-wrap:$color;}
+}
+@each $name, $color in $align-content {
+    .ac-#{$name} { align-content:$color;}
+}
+
+
+@include pad(){
+    @each $name, $color in $flex-direction {
+        .flex-md-#{$name} { 
+            display: flex;
+            flex-direction:$color;
+        }
+    }
+    @each $name, $color in $justify-content {
+        .jc-md-#{$name} { justify-content:$color;}
+    }
+    @each $name, $color in $align-items {
+        .ai-md-#{$name} { align-items:$color;}
+    }
+    @each $name, $color in $flex-wrap {
+        .flex-md-#{$name} { flex-wrap:$color;}
+    }
+    @each $name, $color in $align-content {
+        .ac-md-#{$name} { align-content:$color;}
+    }
+}
+
+@include mobile(){
+    @each $name, $color in $flex-direction {
+        .flex-sm-#{$name} { 
+            display: flex;
+            flex-direction:$color;
+        }
+    }
+    @each $name, $color in $justify-content {
+        .jc-sm-#{$name} { justify-content:$color;}
+    }
+    @each $name, $color in $align-items {
+        .ai-sm-#{$name} { align-items:$color;}
+    }
+    @each $name, $color in $flex-wrap {
+        .flex-sm-#{$name} { flex-wrap:$color;}
+    }
+    @each $name, $color in $align-content {
+        .ac-sm-#{$name} { align-content:$color;}
+    }
+}
+
+
+.flex-1{ flex: 1;}

@@ -1,0 +1,185 @@
+//背景色
+@each $name, $color in $colors {
+    .bg-#{$name} {
+        background: $color;
+    }
+}
+
+
+//線段
+.line-top{ @include line-top;}
+.line-bottom{ @include line-bottom;}
+
+
+//各種寬高
+.h-100{ height: 100%;}
+.w-100{ width: 100%;}
+
+.h-100vh{ height: 100vh;}
+
+.h-var{ height: var(--h);}
+.w-var{ height: var(--w);}
+
+
+@include pad(){
+    .h-md-var{ height: var(--hMd);}
+    .w-md-var{ width: var(--wMd);}
+    .ratio{
+        &-1.1{ aspect-ratio:1/1;}
+        &-3.2{ aspect-ratio:2/3;}
+    }
+}
+
+@include mobile(){
+    .h-sm-var{ height: var(--hSm);}
+    .w-sm-var{ width: var(--wSm);}
+    .ratio{
+        &-1.1{ aspect-ratio:1/1;}
+        &-3.2{ aspect-ratio:2/3;}
+    }
+}
+
+
+//各種間距
+.m-0a{ margin: 0 auto;}
+
+@each $name, $color in $spacings {
+    .ms-#{$name} { margin-left:$color;}
+    .me-#{$name} { margin-right:$color;}
+    .mt-#{$name} { margin-top:$color;}
+    .mb-#{$name} { margin-bottom:$color;}
+    .my-#{$name} { 
+        margin-top: $color;;
+        margin-bottom:$color;
+    }
+    .mx-#{$name} { 
+        margin-left: $color;;
+        margin-right:$color;
+    }
+    
+    .ps-#{$name} { padding-left:$color; }
+    .pe-#{$name} { padding-right:$color;}
+    .pt-#{$name} { padding-top:$color;}
+    .pb-#{$name} { padding-bottom:$color;}
+    .py-#{$name} { 
+        padding-top: $color;;
+        padding-bottom:$color;
+    }
+    .px-#{$name} { 
+        padding-left: $color;;
+        padding-right:$color;
+    }
+
+    .gap-#{$name} {gap:$color;}
+}
+@include pad(){
+    @each $name, $color in $spacings{
+        // margin-pad
+        .ms-md-#{$name} { margin-left:$color;}
+        .me-md-#{$name} { margin-right:$color;}
+        .mt-md-#{$name} { margin-top:$color;}
+        .mb-md-#{$name} { margin-bottom:$color;}
+        .my-md-#{$name} { 
+            margin-top: $color;;
+            margin-bottom:$color;
+        }
+        .mx-md-#{$name} { 
+            margin-left: $color;;
+            margin-right:$color;
+        }
+        
+        //padding-pad
+        .ps-md-#{$name} { padding-left:$color; }
+        .pe-md-#{$name} { padding-right:$color;}
+        .pt-md-#{$name} { padding-top:$color;}
+        .pb-md-#{$name} { padding-bottom:$color;}
+        .py-md-#{$name} { 
+            padding-top: $color;;
+            padding-bottom:$color;
+        }
+        .px-md-#{$name} { 
+            padding-left: $color;;
+            padding-right:$color;
+        }
+
+        .gap-md-#{$name} {gap:$color;}
+    }
+}
+
+@include mobile(){
+    @each $name, $color in $spacings{
+        // margin-mobile
+        .ms-sm-#{$name} { margin-left:$color;}
+        .me-sm-#{$name} { margin-right:$color;}
+        .mt-sm-#{$name} { margin-top:$color;}
+        .mb-sm-#{$name} { margin-bottom:$color;}
+        .my-sm-#{$name} { 
+            margin-top: $color;;
+            margin-bottom:$color;
+        }
+        .mx-sm-#{$name} { 
+            margin-left: $color;;
+            margin-right:$color;
+        }
+        
+        //padding-mobile
+        .ps-sm-#{$name} { padding-left:$color; }
+        .pe-sm-#{$name} { padding-right:$color;}
+        .pt-sm-#{$name} { padding-top:$color;}
+        .pb-sm-#{$name} { padding-bottom:$color;}
+        .py-sm-#{$name} { 
+            padding-top: $color;;
+            padding-bottom:$color;
+        }
+        .px-sm-#{$name} { 
+            padding-left: $color;;
+            padding-right:$color;
+        }
+
+        .gap-sm-#{$name} {gap:$color;}
+    }
+}
+
+.d{
+    &-none{ display: none;}
+    &-block{ display: block;}
+}
+
+
+@include pad(){
+    .d{
+        &-md-none{ display: none;}
+        &-md-block{ display: block;}
+    }
+}
+
+@include mobile(){
+    .d{
+        &-sm-none{ display: none;}
+        &-sm-block{ display: block;}
+    }
+    
+}
+
+
+// 背景圖片
+.bg-cover{
+    background:var(--url) top center no-repeat;
+    background-size: cover ;
+}
+
+@include pad(){
+    .bg-md-cover{
+        background:var(--urlMd) top center no-repeat;
+        background-size: cover ;
+    }
+}
+
+@include mobile(){
+    .bg-sm-cover{
+        background:var(--urlSm) top center no-repeat;
+        background-size: cover ;
+    }
+}
+
+

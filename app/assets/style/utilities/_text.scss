@@ -1,0 +1,80 @@
+.h2{
+  font-size: map-get($font-sizes, 2 );
+  font-weight: map-get($font-weights , bold);
+  text-align: center;
+  color: $color-secondary;
+  
+  @include mobile{
+    font-size: map-get($font-sizes, 7 );
+  }
+}
+
+@each $name, $color in $font-weights{
+  .fw-#{$name} {font-weight:$color;}
+}
+
+.text-italic{
+  font-style: italic;
+}
+
+/*text-color*/
+
+@each $name, $color in $colors {
+    .text-#{$name} { color: $color;}
+    .a-#{$name} {
+        a{ color: $color;}
+      }
+}
+
+@each $name, $color in $font-sizes {
+    .fs-#{$name} {
+      font-size: $color;
+    }
+}
+
+@each $name, $color in $text-aligns {
+  .text-#{$name} {
+    text-align: $color;
+  }
+}
+
+
+
+@include pad(){
+  @each $name, $color in $font-sizes {
+    .fs-md-#{$name} {
+      font-size: $color;
+    }
+  }
+
+  @each $name, $color in $text-aligns {
+    .text-md-#{$name} {
+      text-align: $color;
+    }
+  }
+}
+
+@include mobile(){
+  @each $name, $color in $font-sizes {
+    .fs-sm-#{$name} {
+      font-size: $color;
+    }
+  }
+
+  @each $name, $color in $text-aligns {
+    .text-md-#{$name} {
+      text-align: $color;
+    }
+  }
+}
+
+
+.lh{
+  &-1{line-height: 1;}
+  &-1.25{ line-height: 1.25;}
+}
+
+
+
+
+

@@ -1,0 +1,17 @@
+.input{
+    font-family: "Noto Sans TC" !important;
+}
+.input-text{
+    font-size: map-get($font-sizes , base );
+    border: 1px solid $color-black;
+    padding: $spacing-base * 1.5 $spacing-base * 3;
+    background-color: transparent;
+    
+    placeholder{
+        color: rgba( $color-black , 0.2);
+    }
+
+    &:focus{
+        box-shadow: 0 0 5px rgba( $color-primary , 0.5);
+    }
+}

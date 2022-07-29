@@ -1,0 +1,143 @@
+//斷點尺寸
+$grid-breakpoints: (
+    sm: 767px,
+    md: 992px,
+    lg: 1200px,
+);
+
+//顏色 
+$color-primary: #AA0601;
+$color-secondary: #650300;
+$color-light: #fff;
+$color-black: #000;
+$color-gray: #212529;
+
+
+$colors:(
+    primary: $color-primary,
+    secondary: $color-secondary,
+    light: $color-light,
+    black: $color-black,
+    primary-light:rgba($color-primary,0.05),
+    gray: $color-gray
+);
+
+//flex
+
+$flex-direction: (
+    row:row,
+    column:column,
+    row-reverse:row-reverse,
+    column-reverse:column-reverse
+);
+
+$justify-content: (
+    start:flex-start,
+    center:center,
+    end:flex-end,
+    between:space-between,
+    around:space-around,
+    evenly:space-evenly
+);
+
+$align-items: (
+    start:flex-start,
+    center:center,
+    end:flex-end,
+    stretch:stretch,
+    baseline:baseline
+);
+
+$flex-wrap:(
+    nowrap:nowrap,
+    wrap:wrap,
+    wrap-reverse:wrap-reverse,
+);
+
+$align-content:(
+    stretch:stretch,
+    start:flex-start,
+    center:center,
+    end:flex-end,
+    between:space-between,
+    around:space-around
+);
+
+// Grid columns
+$grid-columns: 12 !default;
+$grid-gutter-width: 24px !default;
+$col: 1/12*100%; // 100/12=8.33333333
+
+$cols: (
+    1:$col*1,
+    2:$col*2,
+    3:$col*3,
+    4:$col*4,
+    5:$col*5,
+    6:$col*6,
+    7:$col*7,
+    8:$col*8,
+    9:$col*9,
+    10:$col*10,
+    11:$col*11,
+    12:$col*12
+);
+
+
+/*-- 間距 一單位為4px --*/
+$spacing-base:4px;
+$spacings:(
+    
+    1:$spacing-base*1,   //4
+    2:$spacing-base*2,   //8
+    3:$spacing-base*3,   //12
+    4:$spacing-base*4,   //16
+    5:$spacing-base*5,   //20
+    6:$spacing-base*6,   //24
+    7:$spacing-base*7,   //28
+    8:$spacing-base*8,   //32
+    9:$spacing-base*9,   //36
+    10:$spacing-base*10, //40
+    11:$spacing-base*11, //44
+    12:$spacing-base*12, //48
+    15:$spacing-base*15, //60
+    16:$spacing-base*16, //64
+    20:$spacing-base*20,  //80
+    minus12:0 - $grid-gutter-width / 2 ,
+    0:0
+);
+
+//文字尺寸
+$font-size-base: 1rem;   //16
+$font-sizes: (
+    1: $font-size-base*4,     //64
+    2: $font-size-base*3,     //48
+    3: $font-size-base*2.5,   //40
+    4: $font-size-base*2.25,  //36
+    5: $font-size-base*2,     //32
+    6: $font-size-base*1.75,  //28
+    7: $font-size-base*1.5,   //24
+    8: $font-size-base*1.25,  //20
+    9: $font-size-base*0.875, //14
+    base: $font-size-base,    //16
+    var:var(--fsz)
+);
+
+$text-aligns:(
+    right: right,
+    left:left,
+    center:center
+);
+
+
+$font-weights: (
+    light: 300,
+    regular: 400,
+    medium: 500,
+    demiBold: 600,
+    bold:700,
+    black:900
+);
+
+
+
