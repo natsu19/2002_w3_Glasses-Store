@@ -1,10 +1,41 @@
----
-title: 首頁
-layout: ./app/layout.ejs
-engine: ejs
-current: index
----
-<main>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <title>首頁｜w3-4 眼鏡電商</title>
+  <link rel="stylesheet" href="../assets/style/all.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+
+  <link rel="shortcut icon" href="../assets/images/favicon.ico"/>
+  <link rel="bookmark" href="../assets/images/favicon.ico"/>
+  <script src="https://kit.fontawesome.com/c6b4a73ea7.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="bg-primary">
+    <div class="container py-0">
+      <nav class="nav flex-row jc-between">
+        <h1 class="logo">
+          <a href="index.html">logo</a>
+        </h1>
+        <div class="navToggle" title="menu"></div>
+        <ul class="navList flex-row flex-sm-column gap-11 gap-sm-0 fs-8">
+          <li><a href="products.html" title="系列鏡框">系列鏡框</a></li>
+          <li><a href="stores.html" title="門市據點">門市據點</a></li>
+          <li><a href="blog.html" title="部落格">部落格</a></li>
+          <li><a href="support.html" title="常見問題">常見問題</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
 
   <!-- heroImg -->
   <section class="h-var h-sm-var bg-cover bg-sm-cover" style=" --url: url(../images/home-header.png); --h:calc(100vh - 80px); --urlSm: url(../images/home-header-sm.png); --hSm:calc(70vh);">
@@ -207,3 +238,63 @@ current: index
   </section>
 
 </main>
+
+  <footer class="text-light a-light bg-primary">
+    <div class="container pt-12 pb-8 pb-md-10 py-sm-6">
+      <div class="flex-row jc-between ai-start flex-wrap">
+        <div class="mb-8 mb-sm-6">
+          <nav class="mb-11 d-sm-none">
+            <ul class="flex-row ai-center hover-underline gap-12">
+              <li><a href="index.html" title="首頁">首頁</a></li>
+              <li><a href="products.html" title="系列鏡框">系列鏡框</a></li>
+              <li><a href="stores.html" title="門市據點">門市據點</a></li>
+              <li><a href="blog.html" title="部落格">部落格</a></li>
+              <li><a href="support.html" title="常見問題">常見問題</a></li>
+            </ul>
+          </nav>
+          <ul class="fs-4 fs-sm-base gap-2">
+            <li>
+              <a href="tel:0800-000-000" title="撥打至 0800-000-000">
+                <i class="fa-light fa-phone me-4"></i>0800-000-000
+              </a>
+            </li>
+            <li>
+              <a href="mailto:glasses@business.com" title="寄信至 glasses@business.com">
+                <i class="fa-light fa-envelope me-4"></i>glasses@business.com
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- socialMedia -->
+        <ul class="flex-row fs-2 fs-md-3 fs-sm-7 lh-1 gap-8 gap-md-4 gap-sm-2">
+          <li>
+            <a href="#" title="連結至(另開新頁)">
+              <i class="fa-brands fa-facebook-square"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="連結至(另開新頁)">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" title="連結至(另開新頁)">
+              <i class="fa-brands fa-line"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="flex-row flex-sm-column jc-between flex-wrap pt-8 pt-sm-4 line-top">
+        <p class="mb-sm-2">Copyright © 2020 Glasses.All rights reserved.</p>
+        <ul class="flex-row flex-sm-column hover-underline fs-9 fs-sm-base gap-12 gap-sm-2">
+          <li><a href="#.html" title="隱私權政策">隱私權政策</a></li>
+          <li><a href="#.html" title="服務條款">服務條款</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script src="./assets/js/vendors.js"></script>
+  <script src="./assets/js/all.js"></script>
+</body>
+
+</html>
