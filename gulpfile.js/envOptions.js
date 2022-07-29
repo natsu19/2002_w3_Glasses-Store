@@ -53,6 +53,11 @@ let envOptions = {
       `${srcPath}/assets/images/**/*`,
     ],
   },
+  font: {
+    src: [
+      `${srcPath}/assets/font/**/*`,
+    ],
+  },
   clean: {
     src: distPath,
   },
