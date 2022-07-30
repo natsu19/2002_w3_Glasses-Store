@@ -1,18 +1,18 @@
-@import "basic/_reset";
-@import "utilities/_variables";
+@import "basic/reset";
+@import "basic/variables";
 
-@import "utilities/_mixin";
-@import "basic/_base";
+@import "utilities/mixin";
+@import "basic/base";
 
-@import "utilities/_grid";
-@import "utilities/_flex";
-@import "utilities/_util";
-@import "utilities/_text";
-@import "utilities/_links";
+@import "utilities/grid";
+@import "utilities/flex";
+@import "utilities/util";
+@import "utilities/text";
+@import "utilities/links";
 
-@import "component/_list";
-@import "component/_form";
+@import "component/list";
+@import "component/form";
 
 
 // layout
-@import "layout/_header";
+@import "layout/header";
