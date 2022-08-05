@@ -62,15 +62,17 @@
     .pt-#{$name} { padding-top:$color;}
     .pb-#{$name} { padding-bottom:$color;}
     .py-#{$name} { 
-        padding-top: $color;;
-        padding-bottom:$color;
+        padding-top: $color !important;
+        padding-bottom:$color !important;
     }
     .px-#{$name} { 
-        padding-left: $color;;
-        padding-right:$color;
+        padding-left: $color !important;
+        padding-right:$color !important;
     }
 
     .gap-#{$name} {gap:$color;}
+    .gap-row-#{$name} {row-gap:$color;}
+    .gap-column-#{$name} {column-gap:$color;}
 }
 @include pad(){
     @each $name, $color in $spacings{
@@ -94,15 +96,17 @@
         .pt-md-#{$name} { padding-top:$color;}
         .pb-md-#{$name} { padding-bottom:$color;}
         .py-md-#{$name} { 
-            padding-top: $color;;
-            padding-bottom:$color;
+            padding-top: $color !important;
+            padding-bottom:$color !important;
         }
         .px-md-#{$name} { 
-            padding-left: $color;;
-            padding-right:$color;
+            padding-left: $color !important;
+            padding-right:$color !important;
         }
 
         .gap-md-#{$name} {gap:$color;}
+        .gap-row-md-#{$name} {row-gap:$color;}
+        .gap-column-md-#{$name} {column-gap:$color;}
     }
 }
 
@@ -137,6 +141,8 @@
         }
 
         .gap-sm-#{$name} {gap:$color;}
+        .gap-row-sm-#{$name} {row-gap:$color;}
+        .gap-column-sm-#{$name} {column-gap:$color;}
     }
 }
 

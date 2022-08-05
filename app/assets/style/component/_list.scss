@@ -6,21 +6,21 @@
 }
 
 //mt48 sm改24
-.list4m2s1-mt48s24{
-    @include list4m2s1(){   
-        li{
-            @include pad(){
-                &:nth-child(3),&:nth-child(4){margin-top: $spacing-base * 12;}
-            }
-            @include mobile(){
-                margin-top: $spacing-base * 6;
-            }
-        }
-    }
-}
+// .list4m2s1-mt48s24{
+//     @include list4m2s1(){   
+//         li{
+//             @include pad(){
+//                 &:nth-child(3),&:nth-child(4){margin-top: $spacing-base * 12;}
+//             }
+//             @include mobile(){
+//                 margin-top: $spacing-base * 6;
+//             }
+//         }
+//     }
+// }
 
 
-//mt48 sm改24
+
 .list3ms1{
     @include list4m2s1(){   
         @include pad(){
@@ -31,11 +31,11 @@
             width: map-get($cols , 4 );
             @include pad(){
                 width: map-get($cols , 6 );
-                &:nth-child(3),&:nth-child(4){margin-top: $spacing-base*12;}
+                // &:nth-child(3),&:nth-child(4){margin-top: $spacing-base*12;}
             }
             @include mobile(){
                 width: map-get($cols , 12 );
-                margin-top: $spacing-base * 6;
+                // margin-top: $spacing-base * 6;
             }
         }
     }

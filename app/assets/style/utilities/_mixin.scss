@@ -86,23 +86,24 @@
     display: flex;
     flex-wrap: wrap;
 
+
     li{
         flex-direction: column;
         width: map-get($cols , 3 );
         padding-left: $grid-gutter-width / 2;
         padding-right: $grid-gutter-width / 2;
-        margin-top: $spacing-base*12;
+        // margin-top: $spacing-base*12;
 
         @include pad(){
             width: map-get($cols , 6 );
-            &:nth-child(3),&:nth-child(4){margin-top: $spacing-base*6;}
+        //     &:nth-child(3),&:nth-child(4){margin-top: $spacing-base*6;}
         }
         @include mobile(){
             width: map-get($cols , 12 );
-            margin-top: $spacing-base*4;
-            &:nth-child(1){
-                margin-top: $spacing-base*6;
-            }
+            // margin-top: $spacing-base*4;
+            // &:nth-child(1){
+            //     margin-top: $spacing-base*6;
+            // }
         }
     }
     @content;
