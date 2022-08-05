@@ -38,7 +38,13 @@
   }
 }
 
-
+@include desktop(){
+  @each $name, $color in $font-sizes {
+    .fs-lg-#{$name} {
+      font-size: $color;
+    }
+  }
+}
 
 @include pad(){
   @each $name, $color in $font-sizes {

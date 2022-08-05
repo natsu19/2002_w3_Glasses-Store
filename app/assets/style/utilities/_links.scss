@@ -18,6 +18,19 @@
         }    
 }
 
+.hover-img-scale{
+    a:hover{ opacity: 0.9;}
+    .img{
+        overflow: hidden;
+        img{
+            transition: 0.8s;
+            &:hover{
+                transform: scale(1.1);                
+            } 
+        }
+    }           
+}
+
 .hover-scale-shadow{
     transition: 0.5s;
         .img{
