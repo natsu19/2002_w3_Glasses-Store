@@ -2577,6 +2577,30 @@ textarea {
 .text-center {
   text-align: center; }
 
+@media (max-width: 1200px) {
+  .fs-lg-1 {
+    font-size: 4rem; }
+  .fs-lg-2 {
+    font-size: 3rem; }
+  .fs-lg-3 {
+    font-size: 2.5rem; }
+  .fs-lg-4 {
+    font-size: 2.25rem; }
+  .fs-lg-5 {
+    font-size: 2rem; }
+  .fs-lg-6 {
+    font-size: 1.75rem; }
+  .fs-lg-7 {
+    font-size: 1.5rem; }
+  .fs-lg-8 {
+    font-size: 1.25rem; }
+  .fs-lg-9 {
+    font-size: 0.875rem; }
+  .fs-lg-base {
+    font-size: 1rem; }
+  .fs-lg-var {
+    font-size: var(--fsz); } }
+
 @media (max-width: 992px) {
   .fs-md-1 {
     font-size: 4rem; }
@@ -2676,6 +2700,20 @@ textarea {
             transform: scale(1.03); }
     .hover-scale:hover a {
       opacity: 0.9; }
+
+.hover-img-scale a:hover {
+  opacity: 0.9; }
+
+.hover-img-scale .img {
+  overflow: hidden; }
+  .hover-img-scale .img img {
+    -webkit-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s; }
+    .hover-img-scale .img img:hover {
+      -webkit-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+              transform: scale(1.1); }
 
 .hover-scale-shadow {
   -webkit-transition: 0.5s;
