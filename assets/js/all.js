@@ -1,10 +1,9 @@
 "use strict";
 
-var navToggle = document.querySelector(".navToggle");
-var nav = document.querySelector(".nav"); //點漢堡icon時
-
-navToggle.onclick = function () {
-  //增加一個active的class
-  nav.classList.toggle("active");
-};
+$(document).ready(function () {
+  $("#head").load("_head.html");
+  $("#header").load("_header.html");
+  $("#footer").load("_footer.html");
+  $("#page").load("_page.html");
+});
 //# sourceMappingURL=all.js.map

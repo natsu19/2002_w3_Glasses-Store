@@ -1,42 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
-  <title>首頁｜w3-4 眼鏡電商</title>
-  <link rel="stylesheet" href="assets/style/all.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
-  <link rel="stylesheet" href="assets/font/fontawesome-pro-6.1.2-web/css/all.min.css">
-  <!-- <script src="https://kit.fontawesome.com/c6b4a73ea7.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-rqn26AG5Pj86AF4SO72RK5fyefcQ/x32DNQfChxWvbXIyXFePlEktwD18fEz+kQU" crossorigin="anonymous"> -->
-  <link rel="shortcut icon" href="/assets/images/favicon.ico"/>
-  <link rel="bookmark" href="assets/images/favicon.ico"/>
-</head>
+<!-- 引入head檔案 -->
+<head id="head"></head>
 
 <body>
-  <header class="bg-primary">
-    <div class="container py-0">
-      <nav class="nav flex-row jc-between">
-        <h1 class="logo">
-          <a href="index.html" title="回首頁">Glasses Store</a>
-        </h1>
-        <div class="navToggle" title="menu"></div>
-        <ul class="navList flex-row flex-sm-column gap-11 gap-sm-0 fs-8">
-          <li><a href="products.html" title="系列鏡框">系列鏡框</a></li>
-          <li><a href="stores.html" title="門市據點">門市據點</a></li>
-          <li><a href="blog.html" title="部落格">部落格</a></li>
-          <li><a href="support.html" title="常見問題">常見問題</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <!-- 引入共用header檔案 -->
+  <header id="header"></header>
 
   <main>
+  
 
   <!-- heroImg -->
   <section class="h-var h-sm-var bg-cover bg-sm-cover" style=" --url: url(../images/home-header.png); --h:calc(100vh - 80px); --urlSm: url(../images/home-header-sm.png); --hSm:calc(70vh);">
@@ -95,7 +67,7 @@
     <!-- 列表排序方式 m=md s=sm 3欄 md時改為1欄 -->
     <ul class="list3ms1 px-0 text-secondary text-center text-italic fw-black fs-2 fs-lg-3 fs-md-2 mt-12 mt-sm-6 gap-md-6">
       <li class="hover-img-scale">
-        <a href="#" title="OPTICAL">
+        <a href="products_01-optical.html" title="OPTICAL">
           <div class="img">
             <img src="assets/images/home-section3-1.png" alt="經典系列鏡框 OPTICAL">
           </div>
@@ -103,7 +75,7 @@
         </a>
       </li>
       <li class="hover-img-scale">
-        <a href="#" title="SUNGLASSES">
+        <a href="products_02-sunglasses.html" title="SUNGLASSES">
           <div class="img">
             <img src="assets/images/home-section3-2.png" alt="經典系列鏡框 SUNGLASSES>">
           </div>
@@ -252,64 +224,14 @@
 
   </section>
 
-</main>
 
-  <footer class="text-light a-light bg-primary">
-    <div class="container pt-12 pb-8 pb-md-10 py-sm-6">
-      <div class="flex-row jc-between ai-start flex-wrap">
-        <div class="mb-8 mb-sm-6">
-          <nav class="mb-11 d-sm-none">
-            <ul class="flex-row ai-center hover-underline gap-12">
-              <li><a href="index.html" title="首頁">首頁</a></li>
-              <li><a href="products.html" title="系列鏡框">系列鏡框</a></li>
-              <li><a href="stores.html" title="門市據點">門市據點</a></li>
-              <li><a href="blog.html" title="部落格">部落格</a></li>
-              <li><a href="support.html" title="常見問題">常見問題</a></li>
-            </ul>
-          </nav>
-          <ul class="fs-4 fs-sm-base gap-2">
-            <li>
-              <a href="tel:0800-000-000" title="撥打至 0800-000-000">
-                <i class="fa-light fa-phone me-4"></i>0800-000-000
-              </a>
-            </li>
-            <li>
-              <a href="mailto:glasses@business.com" title="寄信至 glasses@business.com">
-                <i class="fa-light fa-envelope me-4"></i>glasses@business.com
-              </a>
-            </li>
-          </ul>
-        </div>
-        <!-- socialMedia -->
-        <ul class="flex-row fs-2 fs-md-3 fs-sm-7 lh-1 gap-8 gap-md-4 gap-sm-2">
-          <li>
-            <a href="#" title="連結至(另開新頁)">
-              <i class="fa-brands fa-facebook-square"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="連結至(另開新頁)">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </li>
-          <li>
-            <a href="#" title="連結至(另開新頁)">
-              <i class="fa-brands fa-line"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="flex-row flex-sm-column jc-between flex-wrap pt-8 pt-sm-4 line-top">
-        <p class="mb-sm-2">Copyright © 2020 Glasses.All rights reserved.</p>
-        <ul class="flex-row flex-sm-column hover-underline fs-9 fs-sm-base gap-12 gap-sm-2">
-          <li><a href="#.html" title="隱私權政策">隱私權政策</a></li>
-          <li><a href="#.html" title="服務條款">服務條款</a></li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+  </main>
+  <!-- 引入共用footer檔案 -->
+  <footer id="footer"></footer>
+  
   <script src="./assets/js/vendors.js"></script>
-  <script src="./assets/js/all.js"></script>
+  <script src="./assets/js/all.js"></script>    
 </body>
 
 </html>
+
