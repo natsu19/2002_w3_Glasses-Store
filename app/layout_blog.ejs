@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 引入head檔案 -->
+<head id="head"></head>
+
+<body>
+    <!-- 引入共用header檔案 -->
+    <header id="header"></header>
+    <!-- blog副選單 -->
+    <section class="bg-secondary blogSubNav">
+        <nav aria-label="Blog subNavigation Searchbar" class="subnav container flex-row jc-between a-light fs-8 fw-bold py-0">
+            <ul class="flex-row gap-6 subnav-hover">
+                <li>
+                    <a href="#" title="最新消息">最新消息</a></li>
+                <li>
+                    <a href="#" title="特別企劃">特別企劃</a></li>
+                <li>
+                    <a href="#" title="新品上市">新品上市</a></li>
+                <li>
+                    <a href="#" title="鏡框小知識">鏡框小知識</a></li>
+            </ul>
+            
+            <!-- 右方搜尋 -->
+            <div class="search">
+                <form>
+                    <input name="searchBlog" type="text" placeholder="請輸入關鍵字" id="searchBlog" class="input input-text input-light ms-2 py-0 col-10">
+                    <a href="#" class="searchSumit" title="送出搜尋"></a>
+                </form>
+                <div class="searchToggle" title="搜尋blog"></div>
+            </div>
+        </nav>
+    </section>
+
+    <main>
+    <%- contents %>
+    </main>
+    <!-- 引入共用footer檔案 -->
+    <footer id="footer"></footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>    
+    <script>
+        let searchToggle = document.querySelector(".searchToggle")
+        let blogSubNav = document.querySelector(".blogSubNav")
+        let searchToggleTitle = searchToggle.getAttribute("title")
+        
+
+        //點搜尋icon時
+        searchToggle.onclick = function(){
+            //增加一個active的class
+            blogSubNav.classList.toggle("active");
+
+            // //修改title的值為收合
+            if( searchToggleTitle === "搜尋blog" ){
+                searchToggle.setAttribute("title", "收合");
+                searchToggleTitle = searchToggle.getAttribute("title") 
+            }
+            // //修改title的值為搜尋blog
+            else if(searchToggleTitle === "收合"){
+                searchToggle.setAttribute("title", "搜尋blog");
+                searchToggleTitle = searchToggle.getAttribute("title")
+            }
+        }
+    </script>
+</body>
+
+</html>
+

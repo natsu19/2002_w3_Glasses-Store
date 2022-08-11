@@ -31,7 +31,6 @@
 /* 線段 */
 @mixin line-top{
     position: relative;
-
     &::before {
         content: "";
         position: absolute;
@@ -40,8 +39,8 @@
         top: 0;
         height: 1px;
         background: $color-light;
-        @content;
     }
+    @content;
 }
 
 @mixin line-bottom{
@@ -55,8 +54,8 @@
         bottom: 0;
         height: 1px;
         background: $color-light;
-        @content;
     }
+    @content;
 }
 
 /* 設定hover效果- 下底線展開 */
@@ -82,28 +81,21 @@
 }
 
 //list排列方式
-@mixin list4m2s1 {
+@mixin lists {
     display: flex;
     flex-wrap: wrap;
-
-
     li{
         flex-direction: column;
         width: map-get($cols , 3 );
         padding-left: $grid-gutter-width / 2;
         padding-right: $grid-gutter-width / 2;
-        // margin-top: $spacing-base*12;
 
         @include pad(){
             width: map-get($cols , 6 );
-        //     &:nth-child(3),&:nth-child(4){margin-top: $spacing-base*6;}
         }
         @include mobile(){
             width: map-get($cols , 12 );
-            // margin-top: $spacing-base*4;
-            // &:nth-child(1){
-            //     margin-top: $spacing-base*6;
-            // }
+
         }
     }
     @content;

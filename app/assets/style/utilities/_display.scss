@@ -77,3 +77,27 @@
 
 
 .flex-1{ flex: 1;}
+
+.d{
+    &-none{ display: none;}
+    &-block{ display: block;}
+    &-inlineblock{ display: inline-block;}
+}
+
+@include pad(){
+    .d{
+        &-md-none{ display: none;}
+        &-md-block{ display: block;}
+        &-inlineblock{ display: inline-block;}
+    }
+}
+
+@include mobile(){
+    .d{
+        &-sm-none{ display: none;}
+        &-sm-block{ display: block;}
+        &-inlineblock{ display: inline-block;}
+    }
+    
+}
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- 引入head檔案 -->
+<head id="head"></head>
+
+
+<body>
+    <!-- 引入共用header檔案 -->
+    <header id="header"></header>
+
+    <main>
+        <!-- 產品系列選單 -->
+        <nav aria-label="Products navigation" class="container py-0">
+            <ul class="flex-row text-center fs-5 fs-md-7 fs-sm-base fw-mdium a-black hover-bg-secondary" style="--bw:1px; --clr:#dcdcdc;">
+                <li class="flex-1 b-var" id="pOptical">
+                    <a href="products_01-optical.html" title="optical系列" class="py-6">OPTICAL</a>
+                </li>
+                <li class="flex-1 b-var bl-0" id="pSunglasses">
+                    <a href="products_02-sunglasses.html" title="SUNGLASSES系列" class="py-6">SUNGLASSES</a>
+                </li>
+                <li class="flex-1 b-var bl-0" id="pfunctional">
+                    <a href="#" title="FUNCTIONAL系列" class="py-6">FUNCTIONAL</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="flex-row">
+            <div class="flex-1"><img src="assets/images/product-header-1.png" alt="optical產品情境圖01"></div>
+            <div class="flex-1"><img src="assets/images/product-header-2.png" alt="optical產品情境圖02"></div>
+        </section>
+
+        <%- contents %>
+    </main>
+    <!-- 引入共用footer檔案 -->
+    <footer id="footer"></footer>
+
+    <script src="./assets/js/vendors.js"></script>
+    <script src="./assets/js/all.js"></script>
+</body>
+
+</html>

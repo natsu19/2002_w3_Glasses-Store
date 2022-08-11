@@ -117,3 +117,185 @@
   }
 
 }
+
+//blog subNav
+.subnav-hover{
+  a{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: $spacing-base * 3;
+      height: 100%;
+      transition: 0.5s;
+
+      &:hover{
+          opacity: 1;
+          transition: 0.5s;
+          background: rgba( $color-primary , 0.5 );
+      }
+  }
+}
+
+.search{
+  width: 32px;
+  overflow: hidden;
+  display: flex;
+  justify-content: end;
+  transition:0.5s;
+  line-height: 1;
+  padding-top: $spacing-base * 2;
+  padding-bottom: $spacing-base * 2;
+  color: $color-light;
+
+  form{
+    display: flex;
+    justify-content: end;
+    width: 100%;
+  }
+  
+
+  @include mobile(){ display: none;}
+
+  .input-light{ border-right: 0;}
+
+  &Sumit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60px;
+    border: 1px solid $color-light;
+    border-left: 0;
+    position: relative;
+    
+    
+    &::before{
+      content:"";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: transparent;
+      outline: 2px solid $color-light;
+      transform: translateY(-2px);
+      border-radius: 50%;
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    &::after{
+      content:"";
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background: $color-light;
+      transform: translateX(10px) translateY(8px) rotate(45deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    &:hover{
+      opacity: 1;
+      &::before , &::after{ opacity: 0.5;}
+    }
+  }
+
+  &Toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 $spacing-base * 5;
+    margin-left: $spacing-base * 2;
+    cursor: pointer;
+    position: relative;
+    &::before{
+      content:"";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: transparent;
+      outline: 2px solid $color-light;
+      transform: translateY(-2px);
+      border-radius: 50%;
+      transition: 0.5s;
+    }
+
+    &::after{
+      content:"";
+      position: absolute;
+      width: 10px;
+      height: 2px;
+      background: $color-light;
+      transform: translateX(10px) translateY(8px) rotate(45deg);
+      transition: 0.5s;
+    }
+    &:hover{
+      &::before , &::after{ opacity: 0.5;}
+    }
+  }
+
+}
+
+
+
+
+.blogSubNav{
+  @include pad(){
+    .subnav ul{transition:0.8s;}
+  }
+  &.active{
+    .search{  
+      width: $col * 5;//點擊展開後的寬
+      transition:0.8s;
+      @include pad(){
+        width: $col * 4;
+        transition-delay: 0.5s;
+
+      }
+      .searchSumit{
+        &::before, &::after{opacity: 1;}
+      }
+      .searchToggle {
+        &::before{
+          content:"";
+          position: absolute;
+          width: 30px;
+          height: 0px;
+          background: transparent;
+          outline: 1px solid $color-light;
+          transform: translateX(0) translateY(0) rotate(-45deg);
+          border-radius: 0;
+          transition: 0.5s;
+        }
+    
+        &::after{
+          content:"";
+          position: absolute;
+          width: 30px;
+          height: 0px;
+          background: transparent;
+          transform: translateX(0) translateY(0) rotate(45deg);
+          outline: 1px solid $color-light;
+          transition: 0.5s;
+        }
+      }
+    }
+
+    @include pad(){
+      .subnav{
+        ul{
+          transition: 0.5s;
+          gap: 0;
+          a{
+            padding-left: $spacing-base * 1.5;
+            padding-right: $spacing-base * 1.5;
+            transition: 0.7s;
+          }
+        }
+      }
+    }
+  }
+}
+
+

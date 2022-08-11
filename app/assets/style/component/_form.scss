@@ -15,3 +15,15 @@
         box-shadow: 0 0 5px rgba( $color-primary , 0.5);
     }
 }
+
+.input-light{
+    border: 1px solid $color-light;
+    color: $color-light;
+    placeholder{
+        color: rgba( $color-light , 0.8);
+    }
+
+    &:focus{
+        box-shadow: 0 0 5px rgba( $color-light , 0.8);
+    }
+}
