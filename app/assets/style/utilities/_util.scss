@@ -63,7 +63,7 @@
     .mt-#{$name} { margin-top:$color;}
     .mb-#{$name} { margin-bottom:$color;}
     .my-#{$name} { 
-        margin-top: $color;;
+        margin-top: $color;
         margin-bottom:$color;
     }
     .mx-#{$name} { 
@@ -132,11 +132,11 @@
         .mt-sm-#{$name} { margin-top:$color;}
         .mb-sm-#{$name} { margin-bottom:$color;}
         .my-sm-#{$name} { 
-            margin-top: $color;;
+            margin-top: $color;
             margin-bottom:$color;
         }
         .mx-sm-#{$name} { 
-            margin-left: $color;;
+            margin-left: $color;
             margin-right:$color;
         }
         
@@ -146,11 +146,11 @@
         .pt-sm-#{$name} { padding-top:$color;}
         .pb-sm-#{$name} { padding-bottom:$color;}
         .py-sm-#{$name} { 
-            padding-top: $color;;
+            padding-top: $color;
             padding-bottom:$color;
         }
         .px-sm-#{$name} { 
-            padding-left: $color;;
+            padding-left: $color;
             padding-right:$color;
         }
 
@@ -165,7 +165,7 @@
 .line-bottom{ @include line-bottom;}
 .line-bottom-707070{
     @include line-bottom;
-    &::after{background: #707070;}
+    &::after{background: #707070;}  
 }
 .line-bottom-8-primary{ 
     @include line-bottom;
@@ -174,9 +174,6 @@
         background: $color-primary;
     }
 }
-
-
-
 
 .b{
     @each $name, $color in $colors {
